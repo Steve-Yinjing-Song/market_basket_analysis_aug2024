@@ -19,3 +19,17 @@ out the possibility of co-occurence between products or product combinations. Th
 volume doesn't matter.
 We then created a new column Transaction_ID by concatenating the column MemberNumber and Date.
 
+## Apriori Algorithm
+
+The method for creating the baskets is called Apriori algorithm. We took  a threshold occurrence 
+0.001. Any items that are less than this threshold are removed from further analysis. We then 
+built association rules by setting metric as Lift  and min threshold as 1. By definition, the 
+metric Lift measures how much we have lifted the purchase likelihood of the consequent by having
+antecedent included in thr basket. A values of 1 represents no increase.
+
+## Conclusion
+
+By sorting the metric Lift descendingly, we can see what products or product combinations occur
+together than expected if their purchase frequencies were independent. (sausage) and (whole milk,
+yogurt) have highest Lift score. So we can promote them together in marketing campaigns to 
+drive up more sales.  
